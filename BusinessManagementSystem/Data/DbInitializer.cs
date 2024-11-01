@@ -37,12 +37,9 @@ namespace BusinessManagementSystem.Data
                 List<Role> roles =
                 [
                     new Role { Id = 1, CreatedBy="System", UpdatedBy="System", Name = SD.Role_Superadmin },
-                    new Role { Id = 10, CreatedBy = "System", UpdatedBy = "System", Name = SD.Role_TattooAdmin },
-                    new Role { Id = 20, CreatedBy="System",UpdatedBy="System", Name = SD.Role_KaffeAdmin },
-                    new Role { Id = 30, CreatedBy="System",UpdatedBy="System", Name = SD.Role_ApartmentAdmin },
-                    new Role { Id = 11, CreatedBy = "System", UpdatedBy = "System", Name = SD.Role_TattooEmployee },
-                    new Role { Id = 21, CreatedBy = "System", UpdatedBy = "System", Name = SD.Role_KaffeEmployee },
-                    new Role { Id = 31, CreatedBy = "System", UpdatedBy = "System", Name = SD.Role_ApartmentEmployee }
+                    new Role { Id = 2, CreatedBy = "System", UpdatedBy = "System", Name = SD.Role_Admin },
+                    new Role { Id = 3, CreatedBy="System",UpdatedBy="System", Name = SD.Role_Employee },
+                    new Role { Id = 4, CreatedBy="System",UpdatedBy="System", Name = SD.Role_HR }
                 ];
                 _db.AddRange(roles);
                 _db.SaveChanges();
@@ -112,12 +109,13 @@ namespace BusinessManagementSystem.Data
 
                 List<Menu> menus = [
                     new Menu { Parent = 0,     Name ="Configurations",          Url ="#",                    Sort = 1, Status = true,   CreatedBy="NULL", UpdatedBy="NULL",     Icon ="fas fa-cogs"},
-                    new Menu { Parent = 1,     Name ="Basic Configuration",     Url ="/BasicConfiguration",  Sort = 1, Status = true,   CreatedBy="System", UpdatedBy="System",     Icon ="bi bi-gear"},
-                    new Menu { Parent = 1,     Name ="Menu",                    Url ="/Menu",               Sort = 2, Status = true,   CreatedBy="System", UpdatedBy="System",     Icon ="bi bi-menu-app"},
-                    new Menu { Parent = 0,     Name ="Users",                   Url ="#",                    Sort = 2, Status = true,   CreatedBy="NULL", UpdatedBy="NULL",     Icon ="fa"},
-                    new Menu { Parent = 1002,  Name ="Create User",             Url ="/Users/Create", Sort = 1, Status = true, CreatedBy="rozer.shrestha", UpdatedBy="rozer.shrestha", Icon ="fa"},
-                    new Menu { Parent = 1002, Name ="All Users", Url ="/Users/Index", Sort = 2, Status = true, CreatedBy="rozer.shrestha", UpdatedBy="rozer.shrestha", Icon ="fa"},
-                    new Menu { Parent = 1002, Name ="My Profile", Url ="/Users/Detail", Sort = 3, Status = true, CreatedBy="rozer.shrestha", UpdatedBy="rozer.shrestha", Icon ="fa"}
+                    new Menu { Parent = 1,     Name ="Basic Configuration",     Url ="/BasicConfiguration",  Sort = 1, Status = true,   CreatedBy="System", UpdatedBy="System",     Icon ="fa"},
+                    new Menu { Parent = 1,     Name ="Role",                    Url ="/Role",                Sort = 1, Status = true,   CreatedBy="System", UpdatedBy="System",     Icon ="fa"},
+                    new Menu { Parent = 1,     Name ="Menu",                    Url ="/Menu",               Sort = 2, Status = true,   CreatedBy="System", UpdatedBy="System",     Icon ="fa"},
+                    new Menu { Parent = 0,     Name ="Users",                   Url ="#",                    Sort = 2, Status = true,   CreatedBy="NULL", UpdatedBy="NULL",     Icon ="fas fa-user"},
+                    new Menu { Parent = 4,  Name ="Create User",             Url ="/Users/Create", Sort = 1, Status = true, CreatedBy="rozer.shrestha", UpdatedBy="rozer.shrestha", Icon ="fa"},
+                    new Menu { Parent = 4, Name ="All Users", Url ="/Users/Index", Sort = 2, Status = true, CreatedBy="rozer.shrestha", UpdatedBy="rozer.shrestha", Icon ="fa"},
+                    new Menu { Parent = 4, Name ="My Profile", Url ="/Users/Detail", Sort = 3, Status = true, CreatedBy="rozer.shrestha", UpdatedBy="rozer.shrestha", Icon ="fa"}
                 ];
 
 
