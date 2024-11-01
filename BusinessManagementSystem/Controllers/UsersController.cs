@@ -234,10 +234,10 @@ namespace BusinessManagementSystem.Controllers
             string who = roleName;
             if(who==SD.Role_Superadmin)
                 _responseUserRoleDto = _businessLayer.UserService.GetAllUser(SD.Role_Superadmin);
-            else
-            {
-                _responseUserRoleDto = _businessLayer.UserService.GetAllUser(SD.Role_ApartmentAdmin);
-            }
+            //else
+            //{
+            //    _responseUserRoleDto = _businessLayer.UserService.GetAllUser;
+            //}
 
             if (_responseUserRoleDto.StatusCode == HttpStatusCode.OK)
             {

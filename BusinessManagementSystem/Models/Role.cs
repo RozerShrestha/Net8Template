@@ -6,7 +6,6 @@ namespace BusinessManagementSystem.Models
 {
     public class Role:BaseEntity
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string Name { get; set; }
         public virtual ICollection<UserRole>? UserRoles { get; set; }
@@ -17,6 +16,7 @@ namespace BusinessManagementSystem.Models
         public void Configure(EntityTypeBuilder<Role> builder)
         {
             builder.Property(x => x.Name).HasColumnType("varchar(50)");
+            builder.Property(x => x.Id).ValueGeneratedNever();
         }
     }
 }

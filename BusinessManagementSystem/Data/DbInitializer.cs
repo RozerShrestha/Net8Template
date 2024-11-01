@@ -63,6 +63,11 @@ namespace BusinessManagementSystem.Data
                     PhoneNumber = "9818136462",
                     Gender = "Male",
                     Occupation = "Chief Operating Officer",
+                    Skills="Here goes the skill",
+                    Notes="Here goes the Notes",
+                    FacebookLink="https://youtube.com",
+                    InstagramLink= "https://youtube.com",
+                    TiktokLink= "https://youtube.com",
                     CreatedBy = "System",
                     UpdatedBy = "System"
                 };
@@ -100,22 +105,15 @@ namespace BusinessManagementSystem.Data
             var isMenuCreated = _db.Menus.Any();
             if (!isMenuCreated)
             {
-                //List<Menu> menus =
-                //[
-                //new Menu {  Parent = 0,     Name = "Configurations",          Url = "#",                    Sort = 1, Status = true,   CreatedBy="System", UpdatedBy="System",     Icon = "fas fa-cogs" },
-                //new Menu {  Parent = 1,     Name = "Basic Configuration",     Url = "/BasicConfiguration",  Sort = 1, Status = true,   CreatedBy="System", UpdatedBy="System",     Icon = "bi bi-gear" },
-                //new Menu {  Parent = 1,     Name = "Menu",                    Url = "/Menu",               Sort = 2, Status = true,   CreatedBy="System", UpdatedBy="System",     Icon = "bi bi-menu-app" }
-                //];
-
                 List<Menu> menus = [
                     new Menu { Parent = 0,     Name ="Configurations",          Url ="#",                    Sort = 1, Status = true,   CreatedBy="NULL", UpdatedBy="NULL",     Icon ="fas fa-cogs"},
                     new Menu { Parent = 1,     Name ="Basic Configuration",     Url ="/BasicConfiguration",  Sort = 1, Status = true,   CreatedBy="System", UpdatedBy="System",     Icon ="fa"},
                     new Menu { Parent = 1,     Name ="Role",                    Url ="/Role",                Sort = 1, Status = true,   CreatedBy="System", UpdatedBy="System",     Icon ="fa"},
                     new Menu { Parent = 1,     Name ="Menu",                    Url ="/Menu",               Sort = 2, Status = true,   CreatedBy="System", UpdatedBy="System",     Icon ="fa"},
                     new Menu { Parent = 0,     Name ="Users",                   Url ="#",                    Sort = 2, Status = true,   CreatedBy="NULL", UpdatedBy="NULL",     Icon ="fas fa-user"},
-                    new Menu { Parent = 4,  Name ="Create User",             Url ="/Users/Create", Sort = 1, Status = true, CreatedBy="rozer.shrestha", UpdatedBy="rozer.shrestha", Icon ="fa"},
-                    new Menu { Parent = 4, Name ="All Users", Url ="/Users/Index", Sort = 2, Status = true, CreatedBy="rozer.shrestha", UpdatedBy="rozer.shrestha", Icon ="fa"},
-                    new Menu { Parent = 4, Name ="My Profile", Url ="/Users/Detail", Sort = 3, Status = true, CreatedBy="rozer.shrestha", UpdatedBy="rozer.shrestha", Icon ="fa"}
+                    new Menu { Parent = 5,  Name ="Create User",             Url ="/Users/Create", Sort = 1, Status = true, CreatedBy="rozer.shrestha", UpdatedBy="rozer.shrestha", Icon ="fa"},
+                    new Menu { Parent = 5, Name ="All Users", Url ="/Users/Index", Sort = 2, Status = true, CreatedBy="rozer.shrestha", UpdatedBy="rozer.shrestha", Icon ="fa"},
+                    new Menu { Parent = 5, Name ="My Profile", Url ="/Users/Detail", Sort = 3, Status = true, CreatedBy="rozer.shrestha", UpdatedBy="rozer.shrestha", Icon ="fa"}
                 ];
 
 
